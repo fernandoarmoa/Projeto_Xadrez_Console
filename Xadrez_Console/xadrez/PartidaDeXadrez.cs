@@ -225,11 +225,40 @@ namespace xadrez
         }
         private void ColocarPecas()
         {
+            char[] letras = new char[8] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
+
             //  PEÇAS AMARELAS
 
-            ColocarNovaPeca('c', 1, new Torre(tab, Cor.Amarelo));
-            ColocarNovaPeca('d', 1, new Rei(tab, Cor.Amarelo));
-            ColocarNovaPeca('h', 7, new Torre(tab, Cor.Amarelo));
+            ColocarNovaPeca('a', 1, new Torre(tab, Cor.Amarelo));
+            ColocarNovaPeca('b', 1, new Cavalo(tab, Cor.Amarelo));
+            ColocarNovaPeca('c', 1, new Bispo(tab, Cor.Amarelo));
+            ColocarNovaPeca('d', 1, new Dama(tab, Cor.Amarelo));
+            ColocarNovaPeca('e', 1, new Rei(tab, Cor.Amarelo));
+            ColocarNovaPeca('f', 1, new Bispo(tab, Cor.Amarelo));
+            ColocarNovaPeca('g', 1, new Cavalo(tab, Cor.Amarelo));
+            ColocarNovaPeca('h', 1, new Torre(tab, Cor.Amarelo));
+
+            for (int i = 0; i < letras.Length; i++)
+            {
+                ColocarNovaPeca(letras[i], 2, new Peao(tab, Cor.Amarelo));
+            }
+
+
+            //  PEÇAS VERMELHAS
+
+            ColocarNovaPeca('a', 8, new Torre(tab, Cor.Vermelho));
+            ColocarNovaPeca('b', 8, new Cavalo(tab, Cor.Vermelho));
+            ColocarNovaPeca('c', 8, new Bispo(tab, Cor.Vermelho));
+            ColocarNovaPeca('d', 8, new Dama(tab, Cor.Vermelho));
+            ColocarNovaPeca('e', 8, new Rei(tab, Cor.Vermelho));
+            ColocarNovaPeca('f', 8, new Bispo(tab, Cor.Vermelho));
+            ColocarNovaPeca('g', 8, new Cavalo(tab, Cor.Vermelho));
+            ColocarNovaPeca('h', 8, new Torre(tab, Cor.Vermelho));
+
+            for (int i = 0; i < letras.Length; i++)
+            {
+                ColocarNovaPeca(letras[i], 7, new Peao(tab, Cor.Vermelho));
+            }
 
             //ColocarNovaPeca('c', 1, new Torre(tab, Cor.Amarelo));
             //ColocarNovaPeca('c', 2, new Torre(tab, Cor.Amarelo));
@@ -247,8 +276,8 @@ namespace xadrez
 
             //  PEÇAS VERMELHAS
 
-            ColocarNovaPeca('a', 8, new Rei(tab, Cor.Vermelho));
-            ColocarNovaPeca('b', 8, new Torre(tab, Cor.Vermelho));
+            //ColocarNovaPeca('a', 8, new Rei(tab, Cor.Vermelho));
+            //ColocarNovaPeca('b', 8, new Torre(tab, Cor.Vermelho));
 
             //ColocarNovaPeca('c', 8, new Torre(tab, Cor.Vermelho));
             //ColocarNovaPeca('c', 7, new Torre(tab, Cor.Vermelho));
