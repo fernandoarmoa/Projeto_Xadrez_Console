@@ -65,19 +65,19 @@ namespace Xadrez_Console
             {
                 switch (peca.Cor)
                 {
-                    case Cor.Branca:
+                    case Cor.Branco:
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
-                    case Cor.Preta:
+                    case Cor.Preto:
                         Console.ForegroundColor = ConsoleColor.Black;
                         break;
-                    case Cor.Amarela:
+                    case Cor.Amarelo:
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         break;
                     case Cor.Azul:
                         Console.ForegroundColor = ConsoleColor.Blue;
                         break;
-                    case Cor.Vermelha:
+                    case Cor.Vermelho:
                         Console.ForegroundColor = ConsoleColor.Red;
                         break;
                     case Cor.Verde:

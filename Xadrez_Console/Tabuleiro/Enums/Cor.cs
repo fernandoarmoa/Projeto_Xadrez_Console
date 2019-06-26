@@ -2,12 +2,11 @@
 {
     enum Cor
     {
-        Amarela,
+        Amarelo,
         Azul,
-        Branca,
-        Laranja,
-        Preta,
-        Vermelha,
+        Branco,
+        Preto,
+        Vermelho,
         Verde
     }
 }
