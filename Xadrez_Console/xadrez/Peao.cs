@@ -4,8 +4,10 @@ namespace xadrez
 {
     class Peao : Peca
     {
-        public Peao(Tabuleiro tab, Cor cor) : base(tab, cor)
+        private PartidaDeXadrez Partida;
+        public Peao(Tabuleiro tab, Cor cor, PartidaDeXadrez partida) : base(tab, cor)
         {
+            Partida = partida;
         }
 
         public override string ToString()
@@ -29,7 +31,7 @@ namespace xadrez
             bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
             Posicao pos = new Posicao(0, 0);
 
-            if(Cor == Cor.Vermelho)
+            if(Cor == Cor.Amarelo)
             {
                 pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
                 if(Tab.PosicaoValida(pos) && Livre(pos))
